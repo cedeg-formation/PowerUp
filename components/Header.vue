@@ -10,7 +10,7 @@
         Le fan site pas offciel du tout de Chainsaw Man
       </h2>
       <nav class="py-4 text-xl">
-        <ul class="flex justify-around">
+        <ul class="flex justify-around flex-wrap gap-2">
           <li>
             <NuxtLink to="/" class="hover:text-amber-900">Acceuil</NuxtLink>
           </li>
