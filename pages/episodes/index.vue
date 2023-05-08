@@ -26,6 +26,7 @@ const episodes = {
         :chapter="episode.chapter"
         :index="index"
       />
+      <ArrowNav />
     </div>
   </main>
 </template>
