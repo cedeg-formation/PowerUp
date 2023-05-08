@@ -21,7 +21,7 @@
             <NuxtLink class="hover:text-amber-900" to="/">Contact</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="hover:text-amber-900" to="/"
+            <NuxtLink class="hover:text-amber-900" to="/episodes/"
               >Liste des épisodes</NuxtLink
             >
           </li>
