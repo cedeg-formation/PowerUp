@@ -1,5 +1,11 @@
 <script lang="ts" setup>
-const episodes = {
+import PocketBase from "pocketbase";
+const pb = new PocketBase("http://127.0.0.1:8090");
+const episodes = await pb.collection("episodes").getFullList({
+  sort: "-created",
+});
+console.log(episodes);
+/*const episodes = {
   0: {
     title: "Episode",
     subTitle: "Le chien et la tronçonneuse",
@@ -12,7 +18,7 @@ const episodes = {
     imageUrl: "/img/Chainsaw-Man-episode-2-780x439.jpg",
     chapter: "2-3-4-5",
   },
-};
+};*/
 </script>
 
 <template>
@@ -22,8 +28,15 @@ const episodes = {
         v-for="(episode, index) in episodes"
         :title="episode.title"
         :subTitle="episode.subTitle"
-        :imageUrl="episode.imageUrl"
-        :chapter="episode.chapter"
+        :imageUrl="
+          'http://127.0.0.1:8090/api/files/' +
+          episode.collectionId +
+          '/' +
+          episode.id +
+          '/' +
+          episode.image
+        "
+        :chapter="episode.chapters"
         :index="index"
       />
       <ArrowNav />
