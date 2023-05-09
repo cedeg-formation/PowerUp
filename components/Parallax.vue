@@ -9,7 +9,11 @@ const props = defineProps({
   <div>
     <h3 class="p-6 text-6xl font-bold">{{ title }}</h3>
     <div>
-      <img alt="image des personnages de Chainsaw Man" :src="imageUrl" />
+      <img
+        alt="image des personnages de Chainsaw Man"
+        class="min-w-full"
+        :src="imageUrl"
+      />
     </div>
   </div>
 </template>
