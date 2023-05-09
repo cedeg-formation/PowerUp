@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import PocketBase from "pocketbase";
+
+const pb = new PocketBase("http://127.0.0.1:8090");
+
 const loading = ref(true);
 const email = ref("");
 const message = ref("");
@@ -7,10 +11,11 @@ const isSuccess = ref(false);
 async function submit() {
   try {
     loading.value = true;
-    const newMessage = {
+
+    const record = await pb.collection("contact").create({
       email: email.value,
-      message: message.value,
-    };
+      text: message.value,
+    });
   } catch (e) {
     alert(e);
   } finally {
@@ -55,6 +60,7 @@ async function submit() {
         <button
           class="text-4xl uppercase text-amber-700 font-bold"
           type="submit"
+          @click="submit"
         >
           Envoyer
         </button>
