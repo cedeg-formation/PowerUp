@@ -9,27 +9,7 @@
       <h2 class="text-2xl py-4">
         Le fan site pas offciel du tout de Chainsaw Man
       </h2>
-      <nav class="py-4 text-xl">
-        <ul class="flex justify-around flex-wrap gap-2">
-          <li>
-            <NuxtLink to="/" class="hover:text-amber-900">Acceuil</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink class="hover:text-amber-900" to="/">A propos</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink class="hover:text-amber-900" to="/">Contact</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink class="hover:text-amber-900" to="/episodes/"
-              >Liste des épisodes</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink class="hover:text-amber-900" to="/">Personnages</NuxtLink>
-          </li>
-        </ul>
-      </nav>
+      <NavigationList />
     </div>
   </header>
 </template>
