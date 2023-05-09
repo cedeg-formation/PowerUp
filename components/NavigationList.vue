@@ -22,10 +22,10 @@ if (isFooter) {
         <NuxtLink to="/" class="hover:text-amber-900">Acceuil</NuxtLink>
       </li>
       <li>
-        <NuxtLink class="hover:text-amber-900" to="/">A propos</NuxtLink>
+        <NuxtLink class="hover:text-amber-900" to="/about">A propos</NuxtLink>
       </li>
       <li>
-        <NuxtLink class="hover:text-amber-900" to="/">Contact</NuxtLink>
+        <NuxtLink class="hover:text-amber-900" to="/contact">Contact</NuxtLink>
       </li>
       <li>
         <NuxtLink class="hover:text-amber-900" to="/episodes"
