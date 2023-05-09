@@ -2,9 +2,7 @@
 
 <template>
   <main>
-    <div>
-      <img src="/img/Power%20bandw.jpg" alt="une image de power" />
-    </div>
+    <CarouselCustom />
     <div class="wrapper">
       <Episode
         title="Derniers épisodes :"
