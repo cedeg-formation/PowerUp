@@ -22,7 +22,7 @@ async function submit() {
 <template>
   <main>
     <Parallax title="Contact" imageUrl="/img/Aki-Chainsawman.jpg" />
-    <div class="p-6">
+    <div class="p-10 pt-0">
       <form
         class="flex flex-col items-center gap-4"
         accept-charset="UTF-8"

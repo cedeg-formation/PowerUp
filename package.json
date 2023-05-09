@@ -12,5 +12,8 @@
     "@nuxtjs/tailwindcss": "^6.6.7",
     "@types/node": "^18",
     "nuxt": "^3.4.3"
+  },
+  "dependencies": {
+    "@lucien144/vue3-parallaxy": "^0.1.0"
   }
 }

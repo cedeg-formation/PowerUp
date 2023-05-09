@@ -6,7 +6,7 @@
       title="A propos"
       imageUrl="/img/Screen-Shot-2022-11-15-at-1.11.12-PM-e1668540813864-1024x682.jpg"
     />
-    <div class="p-6">
+    <div class="p-10 pt-0">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum hic
         qui quod tenetur? Aperiam blanditiis, consectetur doloremque facere
