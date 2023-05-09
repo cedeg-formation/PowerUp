@@ -40,3 +40,7 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+### A utiliser avec la db PocketBase :
+
+https://github.com/cedeg-formation/PowerUp-DB-PocketBAse
