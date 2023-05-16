@@ -1,17 +1,14 @@
 <script lang="ts" setup>
-import { Buffer } from "buffer";
-const username = "admin";
-const password = "admin";
-const { data: value } = await useFetch("http://0.0.0.0:8080/PowerUpAPI/about", {
+const config = useRuntimeConfig();
+const { data: data } = await useFetch("about", {
+  baseURL: config.public.apiBase,
   headers: {
     Accept: "application/json",
-    Authorization:
-      "Basic " + Buffer.from(username + ":" + password).toString("base64"),
+    Authorization: `Basic ${config.apiSecret}`,
   },
 });
 
-//'Authorization', 'Basic ' + Buffer.from(username + ":" + password).toString('base64')
-console.log(value.value);
+console.log(data.value);
 </script>
 
 <template>
