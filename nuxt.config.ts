@@ -4,9 +4,9 @@ import { Buffer } from "buffer";
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss"],
   runtimeConfig: {
-    apiSecret: Buffer.from("admin" + ":" + "admin").toString("base64"),
+    apiSecret: process.env.NUXT_API_SECRET,
     public: {
-      apiBase: "http://0.0.0.0:8080/PowerUpAPI",
+      apiBase: process.env.NUXT_PUBLIC_API_BASE_URL,
     },
   },
 });

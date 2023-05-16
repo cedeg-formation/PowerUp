@@ -1,14 +1,17 @@
 <script lang="ts" setup>
+import { Buffer } from "buffer";
 const config = useRuntimeConfig();
-const { data: data } = await useFetch("about", {
+const { data: value } = await useFetch("about", {
   baseURL: config.public.apiBase,
   headers: {
     Accept: "application/json",
-    Authorization: `Basic ${config.apiSecret}`,
+    Authorization:
+      "Basic " +
+      Buffer.from("admin" + ":" + config.apiSecret).toString("base64"),
   },
 });
-
-console.log(data.value);
+//'Authorization', 'Basic ' + Buffer.from(username + ":" + password).toString('base64')
+console.log(value.value);
 </script>
 
 <template>
