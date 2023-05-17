@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@lucien144/vue3-parallaxy": "^0.1.0",
+    "pocketbase": "^0.14.4",
     "vue3-carousel": "^0.3.1"
   }
 }

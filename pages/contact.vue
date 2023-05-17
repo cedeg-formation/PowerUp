@@ -1,16 +1,23 @@
 <script lang="ts" setup>
+import PocketBase from 'pocketbase';
+import {Const} from "../utils/Const";
+
+const pb = new PocketBase(Const.BASE_URL)
+
 const loading = ref(true);
 const email = ref("");
 const message = ref("");
 const isSuccess = ref(false);
 
-async function submit() {
+async function onSubmit() {
   try {
     loading.value = true;
-    const newMessage = {
+
+    const record = await pb.collection('contact').create({
       email: email.value,
-      message: message.value,
-    };
+      message: message.value
+    })
+
   } catch (e) {
     alert(e);
   } finally {
@@ -36,6 +43,7 @@ async function submit() {
             v-model="email"
             class="form-control bg-amber-400 w-60"
             placeholder="Email"
+            required="required"
           />
         </div>
         <div class="flex gap-2">
